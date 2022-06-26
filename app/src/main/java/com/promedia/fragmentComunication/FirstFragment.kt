@@ -60,7 +60,8 @@ class FirstFragment : Fragment() {
         b.ivDado1.setOnClickListener { clickOnDado() }
         b.ivDado2.setOnClickListener { clickOnDado() }
         b.tvContador.setOnClickListener {
-            setFragmentResult("requestKey", bundleOf("bundleKey" to cont.toString()))
+            setFragmentResult("requestKey",
+                bundleOf("bundleKey" to b.tvContador.text))
         }
     }
 
@@ -76,7 +77,7 @@ class FirstFragment : Fragment() {
         b.ivDado1.setImageResource(dados[d1-1])
         b.ivDado2.setImageResource(dados[d2-1])
         b.tvContador.text = cont.toString()
-        setFragmentResult("requestKey", bundleOf("bundleKey" to cont.toString()))
+        //setFragmentResult("requestKey", bundleOf("bundleKey" to cont.toString()))
     }
 
     companion object {
