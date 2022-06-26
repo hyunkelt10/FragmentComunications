@@ -41,14 +41,6 @@ class SecondFragment : Fragment() {
         return b.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        b.tvHello.setOnClickListener {
-            b.tvHello.text = param1
-        }
-
-    }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
